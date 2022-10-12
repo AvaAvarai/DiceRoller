@@ -8,7 +8,7 @@ bool IsDigit(char c) {
 }
 
 bool IsNumber(std::string s) {
-    for (char c : s) {
+    for (const char &c : s) {
         if (!IsDigit(c)) {
             return false;
         }
