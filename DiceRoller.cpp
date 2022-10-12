@@ -4,7 +4,7 @@
 #include <cstring>  // c_str
 
 bool IsDigit(char c) {
-    return (c == '0' || c == '1' || c == '2' || c == '3' || c == '4' || c == '5' || c == '6' || c == '7' || c == '8' || c == '9');
+    return int(c) >= 48 && int(c) <= 57;
 }
 
 bool IsNumber(std::string s) {
@@ -13,10 +13,7 @@ bool IsNumber(std::string s) {
             return false;
         }
     }
-    if (s[0] != '0') {
-        return true;
-    }
-    return false;
+    return s[0] != '0';
 }
 
 int main(int argc, char* argv[]) {
